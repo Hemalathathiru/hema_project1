@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Food Delivery Landing Page</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#fff8f0;
+    color:#333;
+}
+
+/* HEADER */
+
+header{
+    background:#ff5722;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.logo{
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:yellow;
+}
+
+/* HERO */
+
+.hero{
+    height:400px;
+    background:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1400&auto=format&fit=crop') center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content{
+    background:rgba(0,0,0,0.6);
+    padding:30px;
+    border-radius:12px;
+    color:white;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+/* TABLE SECTION */
+
+.order-section{
+    padding:50px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:35px;
+    color:#ff5722;
+}
+
+.table-container{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    border-radius:10px;
+    overflow:hidden;
+}
+
+th{
+    background:#ff5722;
+    color:white;
+    padding:15px;
+}
+
+td{
+    text-align:center;
+    padding:15px;
+    border-bottom:1px solid #ddd;
+}
+
+tr:hover{
+    background:#fff3e0;
+}
+
+.btn{
+    padding:8px 16px;
+    border:none;
+    background:#ff5722;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#e64a19;
+}
+
+/* FOOTER */
+
+footer{
+    background:#1e1e1e;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="navbar">
+
+        <div class="logo">FoodExpress</div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+    </div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+        <h1>Delicious Food Delivered Fast</h1>
+        <p>Fresh Meals • Fast Delivery • Best Offers</p>
+    </div>
+
+</section>
+
+<!-- TABLE -->
+
+<section class="order-section">
+
+    <h2 class="section-title">Recent Orders</h2>
+
+    <div class="table-container">
+
+        <table>
+
+            <tr>
+                <th>Restaurant</th>
+                <th>Food Item</th>
+                <th>Delivery Date</th>
+                <th>View Details</th>
+            </tr>
+
+            <tr>
+                <td>Burger Hub</td>
+                <td>Cheese Burger</td>
+                <td>12-05-2026</td>
+                <td><button class="btn" onclick="viewDetails('Cheese Burger',199)">View</button></td>
+
+            </tr>
+
+            <tr>
+                <td>Pizza Town</td>
+                <td>Veg Pizza</td>
+                <td>13-05-2026</td>
+                <td><button class="btn" onclick="viewDetails('Veg Pizza',150)">View</button></td>
+            </tr>
+
+            <tr>
+                <td>BBQ Nation</td>
+                <td>Chicken Grill</td>
+                <td>14-05-2026</td>
+                <td><button class="btn" onclick="viewDetails('Chicken Grill',200)">View</button></td>
+            </tr>
+
+            <tr>
+                <td>Arabian Nights</td>
+                <td>Shawarma</td>
+                <td>15-05-2026</td>
+                <td><button class="btn" onclick="viewDetails('Shawarma',150)">View</button></td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    <p>© 2026 FoodExpress | All Rights Reserved</p>
+</footer>
+
+<script src="./js/main.js"></script>
+
+</body>
+</html>
